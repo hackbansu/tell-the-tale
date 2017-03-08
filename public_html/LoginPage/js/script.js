@@ -34,7 +34,7 @@ $("#signup").hide(); //hide sigup block
             d = i * 50; //delay
             $(this).delay(d).animate({
                 top: tm
-            }, 500, 'easeOutBack');
+            }, 100, 'easeOutBack');
         })
     })
     $(".flp input").blur(function() {
@@ -44,7 +44,7 @@ $("#signup").hide(); //hide sigup block
                 d = i * 50;
                 $(this).delay(d).animate({
                     top: 0
-                }, 500, 'easeInOutBack');
+                }, 100, 'easeInOutBack');
             })
         }
     })
