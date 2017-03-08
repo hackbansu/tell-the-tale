@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 100px;
+    background: transparent;
+    font-family: 'Fredericka the Great', cursive;
+    /*font-family: Sniglet;*/
+}
+
+main {
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    background: #202030;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.flp {
+    padding: 0 50px;
+    margin-left: 40px;
+}
+
+
+/*Let's place the label over the input*/
+
+.flp div {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.flp input,
+.flp label {
+    width: 400px;
+    display: block;
+    font: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    height: 46px;
+    border: 2px solid #fff;
+}
+
+.flp input {
+    padding: 10px;
+    outline: none;
+    color: white;
+    border-radius: 3px;
+    background:#202030;
+}
+
+.flp label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 8px;
+    border-color: #179b77;
+    cursor: text;
+}
+
+
+/*label styles*/
+
+.ch {
+    display: block;
+    float: left;
+    position: relative;
+    color: #fff4f8;
+    /*for upward animation*/
+    background: #202030;
+}
+
+.ch:first-child {
+    padding-left: 2px;
+}
+
+.ch:last-child {
+    padding-right: 2px;
+}
+
+
+/*active input label*/
+
+.focussed {
+    /*when any input is already focussed clicking on it(label) again won't do anything*/
+    pointer-events: none;
+}
+
+.tab_row div {
+    display: inline-block;
+    margin-bottom: auto;
+    margin-right: 7px;
+}
+.tab_row input,
+.tab_row label {
+    width: 195px;
+}
+/* Tab starts here */
+.tab-group {
+    list-style: none;
+    padding: 10px;
+    margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tab-group li{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    background: rgba(160, 179, 176, 0.25);
+    color: #a0b3b0;
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    /* For 50 + 50 = 100*/
+    text-align: center;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.tab-group li:hover {
+    background: #179b77;
+    color: #ffffff;
+}
+
+.tab-group .active{
+    background: #1ab188;
+    color: #ffffff;
+}
+
+/* Tabs end here */
+
+/*Submit button starts here*/
+.submitBtn{
+	color: white;
+	padding: 10px;
+	width: 400px;
+	margin: 0 10px 0 0px;
+    background: #1ab188;
+	text-align: center;
+	cursor:pointer;
+	transition: .5s ease;
+}
+.submitBtn:hover{
+    background: #179b77;
+}
+/*Submit button end here*/
