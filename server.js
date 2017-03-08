@@ -9,8 +9,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-console.log(path.isAbsolute('/'));
-
 
 app.use('/', express.static(path.join(__dirname, "public_html")));
 
