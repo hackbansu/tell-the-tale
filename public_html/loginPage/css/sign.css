@@ -151,4 +151,5 @@ main {
 .submitBtn:hover{
     background: #179b77;
 }
+form .error{color: red;position: relative;}
 /*Submit button end here*/
