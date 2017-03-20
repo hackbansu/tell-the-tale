@@ -6,6 +6,7 @@ const db = require('../../database/JS/database');
 const router = require('express').Router;
 const route = router();
 
+//req.body = {email,password,firstName,lastName,contactNumber}
 route.post('/addNewUser', function (req, res) {
     let user = {
         email: req.body.email,
@@ -14,17 +15,19 @@ route.post('/addNewUser', function (req, res) {
         lastName: req.body.lastName,
         contactNumber: req.body.contactNumber,
         contributions: {},
+        votes: {},
     };
 
     db.users.insertNewUser(user, function (data) {
-        console.log(data);
+        // console.log(data.ops);
         res.send(data);
     })
 })
 
-route.post('/doesUserExists', function (req, res) {
-    db.users.userExists(req.body.email, function (result) {
-        console.log(result);
+//req.query = {email}
+route.get('/doesUserExists', function (req, res) {
+    db.users.findInUsers({email: req.query.email}, function (result) {
+        // console.log(result);
         if (result) {
             res.json(true);
         }

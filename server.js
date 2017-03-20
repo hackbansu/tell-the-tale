@@ -13,7 +13,9 @@ const database = require('./database/JS/database')
 const LocalStrategy = passportLocal.Strategy;
 
 const routes = {
-    users: require('./routes/users/users.js')
+    users: require('./routes/users/users.js'),
+    stories: require('./routes/stories/stories.js'),
+    snippets: require('./routes/snippets/snippets.js'),
 }
 
 const app = express();
@@ -63,17 +65,20 @@ app.use(session({
 }))
 app.use(passport.initialize());
 app.use(passport.session())
+app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "views"));
 
 //Handling users related requests
 app.use('/users', routes.users);
-
+app.use('/stories', routes.stories);
+// app.use('/snippets', routes.snippets);
 
 
 database.init(function () {
     app.listen(3333, function () {
         console.log("server started at 3333");
-    })
-    database.users.getAllUsers(function (result) {
-        console.log(result);
-    })
-})
+    });
+    // database.users.getAllUsers(function (result) {
+    //     console.log(result);
+    // })
+});

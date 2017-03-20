@@ -7,9 +7,11 @@ const router = require('express').Router;
 const route = router();
 
 const routes = {
-    noLoginUsers: require('./noLoginUsers'),
+    notLoggedInUser: require('./notLoggedInUser'),
+    user: require('./user'),
+    contribute: require('./contribute'),
 }
-route.use('/noLoginUsers', routes.noLoginUsers);
+route.use('/notLoggedInUser', routes.notLoggedInUser);
 
 function checkUser(req, res) {
     if(req['user']){
@@ -21,20 +23,10 @@ function checkUser(req, res) {
         res.redirect('/login.html')
     }
 }
-
 route.use(checkUser);
 
-route.post('/removeUser', function (req, res) {
-    db.users.removeUser(req['user']._id, function (result) {
-        console.log(result);
-        if(result.value){
-            res.json(true);
-        }
-        else{
-            res.json(false);
-        }
-    })
-})
+route.use('/user', routes.user);
+route.use('/contribute', routes.contribute);
 
 
 module.exports = route;
