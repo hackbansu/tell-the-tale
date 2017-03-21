@@ -1,0 +1,68 @@
+
+html {
+    font-size: 1.4vw;
+}
+
+body {
+    font-size: 1rem;
+}
+
+
+/*header*/
+.header{
+    height: 30px;
+}
+
+/*middle*/
+.stories-container-outer{
+    background-color: lightsalmon;
+    height: 800px;
+}
+
+.stories-container-outer > .row{
+    ;
+    height: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.stories-container{
+    background-color: ghostwhite;
+    height: 100%;
+}
+
+
+
+/*Buttons*/
+
+.buttons{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 6rem;
+}
+
+/*fixed buttons (Shuffle and New) styling*/
+.buttons > .btn{
+    margin-top: 6px;
+    width: 100%;
+    font-size: .9rem;
+}
+
+.buttons > .btn > span{
+    transition: 1s 0.1s;
+}
+
+.buttons > .btn:hover{
+    opacity: 0.9;
+    .buttons > .btn > span
+}
+
+
+/*@media screen and (min-width: 800px){*/
+    /*.footer .btn{*/
+        /*padding: 1px 12px;*/
+        /*font-size: 17px;*/
+    /*}*/
+/**/
+/*}*/
