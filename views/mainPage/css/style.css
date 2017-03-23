@@ -1,10 +1,11 @@
 
 html {
-    font-size: 1.4vw;
+    font-size: 1rem;
 }
 
 body {
     font-size: 1rem;
+
 }
 
 
@@ -14,55 +15,141 @@ body {
 }
 
 /*middle*/
+.middle{
+    max-width: 1350px;
+}
+
 .stories-container-outer{
     background-color: lightsalmon;
-    height: 800px;
+    /*height: 800px;*/
 }
 
 .stories-container-outer > .row{
-    ;
-    height: 90%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    /*height: 90%;*/
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-.stories-container{
+.story-container{
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    margin-top: 23px;
     background-color: ghostwhite;
-    height: 100%;
+    min-height: 7rem;
+}
+.story-container > span{
+    text-wrap: normal;
 }
 
 
 
 /*Buttons*/
-
 .buttons{
     position: fixed;
     bottom: 25px;
-    right: 25px;
-    width: 6rem;
+    right: 9vw;
+    width: 7.56vw;
 }
 
-/*fixed buttons (Shuffle and New) styling*/
+/*fixed buttons (Shuffle and New)*/
 .buttons > .btn{
     margin-top: 6px;
-    width: 100%;
     font-size: .9rem;
 }
-
-.buttons > .btn > span{
-    transition: 1s 0.1s;
-}
-
+/*fixed buttons (Shuffle and New)*/
 .buttons > .btn:hover{
     opacity: 0.9;
-    .buttons > .btn > span
 }
 
+/*shuffle button*/
+.buttons > .shuffleButton{
+    width: 100%;
+    padding: 0.46116vw 0.92232vw;
+}
 
-/*@media screen and (min-width: 800px){*/
-    /*.footer .btn{*/
-        /*padding: 1px 12px;*/
-        /*font-size: 17px;*/
-    /*}*/
-/**/
+/*new button*/
+.buttons > .newButton{
+    width: 80%;
+    margin-left: 10%;
+    padding: 0.7644vw 0.9vw;
+}
+
+/*fixed buttons (Shuffle and New) icons*/
+.buttons > .btn > span:first-child{
+    transition: 0.7s 0.16s;
+}
+/*fixed button (Shuffle and New) icons*/
+.buttons > .btn:hover > span:first-child{
+    transform: rotateX(180deg)
+}
+
+/*fixed button (New) text span*/
+/*.buttons > .btn:last-child > span:last-child{*/
+    /*font-size: 1.1em;*/
 /*}*/
+
+@media screen and (max-width: 992px){
+    .buttons{
+        right: 2vw;
+        width: 9.508vw;
+    }
+
+    /*fixed buttons (Shuffle and New)*/
+    .buttons > .btn{
+        font-size: 5vw;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+        border-radius: 50%;
+    }
+
+    /*shuffle button*/
+    .buttons > .shuffleButton{
+        padding: 0.46116vw 0.46116vw;
+    }
+
+    /*new button*/
+    .buttons > .newButton{
+        padding: 0.7644vw 1.22976vw;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /*fixed buttons (Shuffle and New) icons*/
+    .buttons > .btn > span:first-child{
+        margin-top: 10%;
+    }
+
+    /*fixed buttons (New) icon*/
+    .buttons > .btn:last-child > span:first-child{
+        margin-left: 10%;
+    }
+}
+
+@media screen and (min-width: 1350px){
+
+    html {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+
+    .buttons{
+        right: calc((100vw - 1350px)/2 + 121.49865px);
+        /*right: var(--right);*/
+        width: 102.047px;
+    }
+
+    /*shuffle button*/
+    .buttons > .shuffleButton{
+        padding: 6.226px 12.451px;
+    }
+
+    /*new button*/
+    .buttons > .newButton{
+        padding: 10.319px 16.602px;
+    }
+}
