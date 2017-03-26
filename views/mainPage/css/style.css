@@ -10,8 +10,16 @@ body {
 
 
 /*header*/
-.header{
-    height: 30px;
+/*.header{*/
+    /*height: 30px;*/
+/*}*/
+
+.header-outer{
+    background-color: #394140;
+}
+
+.header-inner{
+    max-width: 1350px;
 }
 
 /*middle*/
@@ -39,7 +47,7 @@ body {
     min-height: 7rem;
 }
 .story-container > span{
-    text-wrap: normal;
+    overflow: auto;
 }
 
 

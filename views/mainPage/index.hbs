@@ -9,7 +9,83 @@
 <body>
 
 <!--header-->
-<div class="header">
+<div class="header-outer ">
+    <div class="header-inner container-fluid">
+        <!--upper part containing banner and about_help-->
+        <div class="row header-upper">
+            <!--till banner-->
+            <div class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6  col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4">
+                <span>Taleit</span>
+                <span>tell the tale</span>
+            </div>
+            <!--after banner till help-->
+            <div class="col-xs-offset-2 col-xs-0 col-sm-offset-1 col-sm-1 col-md-offset-2 col-md-1 col-lg-offset-2 col-lg-1">
+                <a href="/help">help</a>
+            </div>
+            <!--after help till about-->
+            <div class="col-xs-offset-0 col-xs-0 col-sm-offset-0 col-sm-1 col-md-offset-0 col-md-1 col-lg-offset-0 col-lg-1">
+                <a href="/about">about</a>
+            </div>
+        </div>
+        <!--lower part containing headings and user_details/login_register-->
+        <div class="row header-lower">
+            <!--till headings-->
+            <div class="col-xs-offset-0 col-xs-12 col-sm-offset-2 col-sm-8  col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
+                <ul class="nav nav-pills nav-justified">
+                    <li role="presentation" class="active"><a href="#allStories">All stories</a></li>
+                    <li role="presentation"><a href="#topStories">Top stories</a></li>
+                    <li role="presentation"><a href="#recentStories">Recent stories</a></li>
+                    <li role="presentation"><a href="#editorsPick">Editor's Pick</a></li>
+                </ul>
+            </div>
+
+            <!--till headings dropdown-->
+            <div class="col-xs-offset-0 col-xs-12 col-sm-offset-2 col-sm-8   col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
+                <ul class="nav nav-pills nav-justified">
+                    <li role="presentation" class="active"><a href="#allStories">All stories</a></li>
+                    <li role="presentation"><a href="#topStories">Top stories</a></li>
+                    <li role="presentation"><a href="#recentStories">Recent stories</a></li>
+                    <li role="presentation"><a href="#editorsPick">Editor's Pick</a></li>
+                </ul>
+            </div>
+
+            <!--after headings till user_details/login_register-->
+            <div class="col-xs-offset-0 col-xs-0 col-sm-offset-0 col-sm-2  col-md-offset-1 col-md-2 col-lg-offset-1 col-lg-2">
+                <!--{{#if user}}-->
+                    <!--<div class="row">-->
+                        <!--<div class="userImage col-xs-0 col-sm-1 col-md-1 col-lg-1">-->
+                            <!--<a href="/users/user/profile/{{user.userName}}">-->
+                                <!--<img src="{{user.userImage}}" class="img-responsive img-circle center-block">-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class="userImage col-xs-0 col-sm-1 col-md-1 col-lg-1">-->
+                            <!--&lt;!&ndash; Single button &ndash;&gt;-->
+                            <!--<div class="btn-group">-->
+                                <!--<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"-->
+                                        <!--aria-haspopup="true" aria-expanded="false">-->
+                                    <!--{{user.userName}} <span class="caret"></span>-->
+                                <!--</button>-->
+                                <!--<ul class="dropdown-menu">-->
+                                    <!--<li><a href="/users/user/profile/{{user.userName}}">-->
+                                        <!--<span>{{user.userName}}</span>-->
+                                        <!--<span>view profile</span>-->
+                                    <!--</a></li>-->
+                                    <!--<li role="separator" class="divider"></li>-->
+                                    <!--<li><a href="/help">Support</a></li>-->
+                                    <!--<li><a href="/">Taleit Home</a></li>-->
+                                    <!--<li role="separator" class="divider"></li>-->
+                                    <!--<li><a href="/users/user/settings">Settings and privacy</a></li>-->
+                                    <!--<li><a href="/users/user/logout">Log out</a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--{{else}}-->
+                    <button type="button" class="btn btn-danger">Login or Register</button>
+                <!--{{/if}}-->
+            </div>
+        </div>
+    </div>
 
 </div>
 <!--middle-->
@@ -22,7 +98,9 @@
                         hdsaifuihsdofijsdafpdsoahdsaifuihsdofijsdafpdsoahdsaifuihsdofijsdafpdsoahdsaifuihsdofijsdhdsaifuih sdofijsdafpdsoahdsaifuihsdofijsdafpdsoahdsaifuihsdofijsdafpdsoahdsaifuihsdofijsd
                     </span>
                 </div>
-                <div class="story-container col-md-push-1 col-sm-push-1 col-xs-push-1 col-md-10 col-sm-10 col-xs-10">Pawan Bansal</div>
+                <div class="story-container col-md-push-1 col-sm-push-1 col-xs-push-1 col-md-10 col-sm-10 col-xs-10">
+                    Pawan Bansal
+                </div>
                 <div class="story-container col-md-push-1 col-sm-push-1 col-xs-push-1 col-md-10 col-sm-10 col-xs-10"></div>
                 <div class="story-container col-md-push-1 col-sm-push-1 col-xs-push-1 col-md-10 col-sm-10 col-xs-10"></div>
                 <div class="story-container col-md-push-1 col-sm-push-1 col-xs-push-1 col-md-10 col-sm-10 col-xs-10"></div>
