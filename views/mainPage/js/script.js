@@ -23,7 +23,7 @@ $(window).resize(function () {
         shuffleButtonTextNode.text(' Shuffle');
         newButtonTextNode.text(' New')
     }
-    else{
+    else {
         // $('.buttons').css('right', 25);
         shuffleButtonTextNode.text('');
         newButtonTextNode.text('')
@@ -43,7 +43,7 @@ $(window).scroll(function () {
 })
 
 setInterval(function () {
-    if(didScroll){
+    if (didScroll) {
         hasScrolled();
         didScroll = false;
     }
@@ -52,17 +52,17 @@ setInterval(function () {
 function hasScrolled() {
     let st = $(this).scrollTop();
 
-    if(Math.abs(lastScrollTop - st) <= delta){
+    if (Math.abs(lastScrollTop - st) <= delta) {
         return;
     }
 
-    if(st > lastScrollTop && st > headerHeight){
+    if (st > lastScrollTop && st > headerHeight * 0.55) {
         //scroll down
         header.removeClass('nav-down').addClass('nav-up');
     }
-    else{
+    else {
         //scroll up
-        if(st + $(window).height() < $(document).height()){
+        if (st + $(window).height() < $(document).height()) {
             header.removeClass('nav-up').addClass('nav-down')
         }
     }
@@ -74,22 +74,9 @@ function hasScrolled() {
 let categoriesContainer = $('.categories-container');
 let caretContainer = $('.caret-container');
 let catogoriesContainerCaret = $('.categories-container-outer .caret')
-let catogoriesContainerExpanded = false;
 
 caretContainer.click(function (ev) {
     ev.stopPropagation();
-    if(!catogoriesContainerExpanded){
-        categoriesContainer.css('height', "15rem")
-        categoriesContainer.css('overflow', "auto")
-        catogoriesContainerCaret.css('border-top', '0px solid #000000');
-        catogoriesContainerCaret.css('border-bottom', '10px solid #000000');
-    }
-    else{
-        categoriesContainer.css('height', "calc(7rem - 10px)");
-        categoriesContainer.css('overflow', "hidden");
-        catogoriesContainerCaret.css('border-bottom', '0px solid #000000');
-        catogoriesContainerCaret.css('border-top', '10px solid #000000');
-    }
-
-    catogoriesContainerExpanded = !catogoriesContainerExpanded;
+    catogoriesContainerCaret.toggleClass('caret-up');
+    categoriesContainer.toggleClass('expanded-categories-container');
 })
